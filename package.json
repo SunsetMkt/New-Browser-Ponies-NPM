@@ -27,5 +27,17 @@
   },
   "devDependencies": {
     "unzipper": "^0.12.3"
-  }
+  },
+  "keywords": [
+    "ponies",
+    "browser-ponies",
+    "animation",
+    "static-assets",
+    "npm-package",
+    "fun",
+    "mlp",
+    "mlpfim",
+    "mylittlepony",
+    "friendshipismagic"
+  ]
 }
