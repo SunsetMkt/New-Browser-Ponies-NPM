@@ -1,0 +1,31 @@
+{
+  "name": "new-browser-ponies",
+  "version": "1.1.7",
+  "description": "NPM package of Pony-House/New-Browser-Ponies",
+  "homepage": "https://github.com/SunsetMkt/New-Browser-Ponies-NPM#readme",
+  "bugs": {
+    "url": "https://github.com/SunsetMkt/New-Browser-Ponies-NPM/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunsetMkt/New-Browser-Ponies-NPM.git"
+  },
+  "license": "MIT",
+  "author": "JasminDreasond",
+  "type": "module",
+  "files": [
+    "dist",
+    "build.js",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "unzipper": "^0.12.3"
+  }
+}
