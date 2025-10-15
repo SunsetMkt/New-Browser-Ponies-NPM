@@ -1,5 +1,7 @@
 # New-Browser-Ponies-NPM
 
+[![NPM Version](https://img.shields.io/npm/v/browser-ponies)](https://www.npmjs.com/package/browser-ponies)
+
 NPM package of [Pony-House/New-Browser-Ponies](https://github.com/Pony-House/New-Browser-Ponies)
 
 ## License
