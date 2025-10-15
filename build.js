@@ -1,4 +1,4 @@
-import { mkdir, rm, writeFile } from "fs/promises";
+import { mkdir, rm, writeFile, readdir, rename } from "fs/promises";
 import unzipper from "unzipper";
 import { pipeline } from "stream/promises";
 import { Readable } from "stream";
@@ -23,7 +23,17 @@ async function main() {
     console.log("📂 Extracting...");
     await pipeline(Readable.from(buffer), unzipper.Extract({ path: dist }));
 
+    const [folderName] = await readdir(dist);
+    const folderPath = `${dist}/${folderName}`;
+
+    const files = await readdir(folderPath);
+    for (const file of files) {
+        await rename(`${folderPath}/${file}`, `${dist}/${file}`);
+    }
+
+    await rm(folderPath, { recursive: true, force: true });
     await rm(tmp, { force: true });
+
     console.log("✅ Done! Files extracted to", dist);
 }
 
